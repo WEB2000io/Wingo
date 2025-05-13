@@ -1,0 +1,32 @@
+body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+h1 { text-align: center; }
+.section { background: white; padding: 15px; border-radius: 10px; margin-bottom: 20px; }
+.inputs input, .inputs select, .inputs button { margin: 5px; padding: 10px; }
+#results { margin-top: 10px; }
+}
+
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button-grid button, .section button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#result {
+  margin-top: 30px;
+  text-align: left;
+}

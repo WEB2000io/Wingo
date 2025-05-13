@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wingo Predictor V6</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Wingo Predictor V6</h1>
+
+  <div class="section">
+    <h2>Enter Last 5 Results (Number and Color)</h2>
+    <div class="inputs">
+      <input type="text" id="historyInput" placeholder="e.g. 2R, 8G, 0V...">
+      <button onclick="addHistory()">Add</button>
+      <button onclick="clearHistory()">Clear</button>
+    </div>
+    <div id="historyDisplay"></div>
+  </div>
+
+  <div class="section">
+    <h2>Prediction</h2>
+    <button onclick="predictNumber()">Predict Number</button>
+    <button onclick="predictSmallBig()">Predict Small/Big</button>
+    <button onclick="predictColor()">Predict Color</button>
+    <div id="results"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>/button>
+    </div>
+
+    <div class="section">
+      <h2>Last 5 Colors:</h2>
+      <button onclick="addColor('Red')">Red</button>
+      <button onclick="addColor('Green')">Green</button>
+      <button onclick="addColor('Violet')">Violet</button>
+      <p>Entered: <span id="color-history">[]</span></p>
+      <button onclick="clearColors()">Clear Colors</button>
+      <button onclick="predictColor()">Predict Color</button>
+    </div>
+
+    <div id="result">
+      <h2>Predictions:</h2>
+      <p><strong>Next Number:</strong> <span id="pred-num">---</span></p>
+      <p><strong>Small/Big:</strong> <span id="pred-sb">---</span></p>
+      <p><strong>Color:</strong> <span id="pred-color">---</span></p>
+    </div>
+
+    <div class="section">
+      <h2>Prediction Stats</h2>
+      <p>Total Predictions: <span id="total">0</span></p>
+      <p>Correct: <span id="correct">0</span></p>
+      <p>Accuracy: <span id="accuracy">0%</span></p>
+    </div>
+
+    <div class="section">
+      <h2>Color Trend (Last 10)</h2>
+      <canvas id="colorChart" width="300" height="100"></canvas>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
